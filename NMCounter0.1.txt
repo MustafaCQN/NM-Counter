@@ -1,0 +1,593 @@
+package herolar;
+import java.awt.FlowLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+
+public class HeroListesi {
+	public static void Buton(String Neden){
+		JFrame frame = new JFrame("Tekrar Denemek Ýstermisiniz..?");
+		JButton Buton_e = new JButton("Evet");
+		JButton Buton_h = new JButton("Hayýr");
+		JLabel metin = new JLabel(Neden,JLabel.CENTER);
+		frame.add(metin);
+		frame.setSize(400,100);
+		frame.setLocation(500,300);
+		frame.setLayout(new FlowLayout());
+		frame.add(Buton_e);
+		frame.add(Buton_h);
+		frame.setVisible(true);
+		Buton_e.addActionListener(new ActionListener(){
+			public void actionPerformed(ActionEvent e) {
+				String Tekrar_dene_hero;
+				Tekrar_dene_hero = JOptionPane.showInputDialog("Hero Adý: ");
+				Counter(Tekrar_dene_hero);
+				frame.setVisible(false);
+			}
+		});
+		Buton_h.addActionListener(new ActionListener(){
+			public void actionPerformed(ActionEvent e) {
+				System.exit(0);
+			}
+		});
+	}
+	public static void Counter(String HeroAdi){
+		String Hero = HeroAdi.toLowerCase();
+		switch(Hero){
+		case "aatrox":
+			JOptionPane.showMessageDialog(null, "Aatrox \n\nGüçlü Olduðu Herolar\nHecarim Talon Shyvana\n\nZayýf Olduðu Herolar\nJax Kindred Poppy\n\nUyumlu Olduðu Herolar\nGnar Yasuo Azir");
+			Buton("Kullaným Baþarýlý");
+			break;
+		case "ahri":
+			JOptionPane.showMessageDialog(null, "Ahri \n\nGüçlü Olduðu Herolar\nAurelion Sol Orianna Twisted Fate\n\nZayýf Olduðu Herolar\nMalzahar Kassadin Swain\n\nUyumlu Olduðu Herolar\nRiven Jax Akali");
+			Buton("Kullaným Baþarýlý");
+			break;
+		case "akali":
+			JOptionPane.showMessageDialog(null, "Akali \n\nGüçlü Olduðu Herolar\nFizz Yasuo Ahri\n\nZayýf Olduðu Herolar\nLee Sin Garen Mordekaiser\n\nUyumlu Olduðu Herolar\nShen Diana Katarina");
+			Buton("Kullaným Baþarýlý");
+			break;
+		case "alistar":
+			JOptionPane.showMessageDialog(null, "Alistar \n\nGüçlü Olduðu Herolar\nRenekton Blitzcrank Katarina\n\nZayýf Olduðu Herolar\nZyra Vayne Morgana\n\nUyumlu Olduðu Herolar\nYasuo Kalista Jhin");
+			Buton("Kullaným Baþarýlý");
+			break;
+		case "amumu":
+			JOptionPane.showMessageDialog(null, "Amumu \n\nGüçlü Olduðu Herolar\nBlitzcrank Katarina Thresh\n\nZayýf Olduðu Herolar\nShyvana Xin Zhao Volibear\n\nUyumlu Olduðu Herolar\nKatarina Malphite Kennen");
+			Buton("Kullaným Baþarýlý");
+			break;
+		case "anivia":
+			JOptionPane.showMessageDialog(null, "Anivia \n\nGüçlü Olduðu Herolar\nLissandra Kayle Karthus\n\nZayýf Olduðu Herolar\nTalon Diana Malzahar\n\nUyumlu Olduðu Herolar\nJanna Jarvan IV Ashe");
+			Buton("Kullaným Baþarýlý");
+			break;
+		case "annie":
+			JOptionPane.showMessageDialog(null, "Annie \n\nGüçlü Olduðu Herolar\nNidalee Miss Fortune Lulu\n\nZayýf Olduðu Herolar\nLux Vel'Koz Ziggs\n\nUyumlu Olduðu Herolar\nJinx Amumu Gangplank");
+			Buton("Kullaným Baþarýlý");
+			break;
+		case "ashe":
+			JOptionPane.showMessageDialog(null, "Ashe \n\nGüçlü Olduðu Herolar\nUdyr Vayne Zilean\n\nZayýf Olduðu Herolar\nZed Galio Master Yi\n\nUyumlu Olduðu Herolar\nBraum Leona Thresh");
+			Buton("Kullaným Baþarýlý");
+			break;
+		case "aurelion sol":
+			JOptionPane.showMessageDialog(null, "Aurelion Sol \n\nGüçlü Olduðu Herolar\nHeimerdinger Miss Fortune Caitlyn\n\nZayýf Olduðu Herolar\nAkali Ahri Fizz\n\nUyumlu Olduðu Herolar\nTahm Kench Morgana Braum");
+			Buton("Kullaným Baþarýlý");
+			break;
+		case "azir":
+			JOptionPane.showMessageDialog(null, "Azir \n\nGüçlü Olduðu Herolar\nHeimerdinger Twisted Fate Taliyah\n\nZayýf Olduðu Herolar\nZiggs Vi Kassadin\n\nUyumlu Olduðu Herolar\nGnar Yasuo Aatrox");
+			Buton("Kullaným Baþarýlý");
+			break;
+		case "bard":
+			JOptionPane.showMessageDialog(null, "Bard \n\nGüçlü Olduðu Herolar\nTaric Jinx Kog'Maw\n\nZayýf Olduðu Herolar\nBlitzcrank Leona Thresh\n\nUyumlu Olduðu Herolar\nJhin Jinx Vayne");
+			Buton("Kullaným Baþarýlý");
+			break;
+		case "blitzcrank":
+			JOptionPane.showMessageDialog(null, "Blitzcrank \n\nGüçlü Olduðu Herolar\nBard Sona Kog'Maw\n\nZayýf Olduðu Herolar\nSivir Morgana Ezreal\n\nUyumlu Olduðu Herolar\nJinx Jhin Vayne");
+			Buton("Kullaným Baþarýlý");
+			break;
+		case "brand":
+			JOptionPane.showMessageDialog(null, "Brand \n\nGüçlü Olduðu Herolar\nTeemo Lulu Ryze\n\nZayýf Olduðu Herolar\nTalon Kassadin Vel'Koz\n\nUyumlu Olduðu Herolar\nAmumu Maokai Jarvan IV");
+			Buton("Kullaným Baþarýlý");
+			break;
+		case "braum":
+			JOptionPane.showMessageDialog(null, "Braum \n\nGüçlü Olduðu Herolar\nCaitlyn Jhin Lucian\n\nZayýf Olduðu Herolar\nMorgana Lulu Alistar\n\nUyumlu Olduðu Herolar\nLucian Vayne Ashe");
+			Buton("Kullaným Baþarýlý");
+			break;
+		case "caitlyn":
+			JOptionPane.showMessageDialog(null, "Caitlyn \n\nGüçlü Olduðu Herolar\nTwitch Quinn Kindred\n\nZayýf Olduðu Herolar\nSivir Yasuo Braum\n\nUyumlu Olduðu Herolar\nMorgana Thresh Nami");
+			Buton("Kullaným Baþarýlý");
+			break;
+		case "camille":
+			JOptionPane.showMessageDialog(null, "Camille \n\nGüçlü Olduðu Herolar\nLeBlanc Aureloin Sol Ahri\n\nZayýf Olduðu Herolar\nFiora Illaoi Ekko\n\nUyumlu Olduðu Herolar\nBraum Riven Janna");
+			Buton("Kullaným Baþarýlý");
+			break;
+		case "cassiopeia":
+			JOptionPane.showMessageDialog(null, "Cassiopeia \n\nGüçlü Olduðu Herolar\nRyze Mordekaiser Vladimir\n\nZayýf Olduðu Herolar\nGalio Viktor Kled\n\nUyumlu Olduðu Herolar\nTeemo Singed Twitch");
+			Buton("Kullaným Baþarýlý");
+			break;
+		case "cho gath":
+		case "cho'gath":
+			JOptionPane.showMessageDialog(null, "Cho'Gath \n\nGüçlü Olduðu Herolar\nKatarina Yorick Diana\n\nZayýf Olduðu Herolar\nKayle Vayne Lee Sin\n\nUyumlu Olduðu Herolar\nYasuo Rek'Sai Nocturne");
+			Buton("Kullaným Baþarýlý");
+			break;
+		case "corki":
+			JOptionPane.showMessageDialog(null, "Corki \n\nGüçlü Olduðu Herolar\nTwitch Vayne Ezreal\n\nZayýf Olduðu Herolar\nDr. Mundo Draven Zilean\n\nUyumlu Olduðu Herolar\nLeona Thresh Nami");
+			Buton("Kullaným Baþarýlý");
+			break;
+		case "darius":
+			JOptionPane.showMessageDialog(null, "Darius \n\nGüçlü Olduðu Herolar\nKatarina Vi Nasus\n\nZayýf Olduðu Herolar\nRenekton Vayne Sejuani\n\nUyumlu Olduðu Herolar\nDraven Fiora Olaf");
+			Buton("Kullaným Baþarýlý");
+			break;
+		case "diana":
+			JOptionPane.showMessageDialog(null, "Diana \n\nGüçlü Olduðu Herolar\nAurelion Sol Twisted Fate Tristana\n\nZayýf Olduðu Herolar\nFiora Cho'Gath Mordekaiser\n\nUyumlu Olduðu Herolar\nZac Akali Yasuo");
+			Buton("Kullaným Baþarýlý");
+			break;
+		case "dr.mundo":
+		case "mundo":
+		case "dr mundo":
+			JOptionPane.showMessageDialog(null, "Dr. Mundo \n\nGüçlü Olduðu Herolar\nJax Tryndamere Corki\n\nZayýf Olduðu Herolar\nOlaf Gangplank Fizz\n\nUyumlu Olduðu Herolar\nThresh Leona Darius");
+			Buton("Kullaným Baþarýlý");
+			break;
+		case "draven":
+			JOptionPane.showMessageDialog(null, "Draven \n\nGüçlü Olduðu Herolar\nSivir Ezreal Sona\n\nZayýf Olduðu Herolar\nThresh Varus Blitzcrank\n\nUyumlu Olduðu Herolar\nThresh Leona Janna");
+			Buton("Kullaným Baþarýlý");
+			break;
+		case "ekko":
+			JOptionPane.showMessageDialog(null, "Ekko \n\nGüçlü Olduðu Herolar\nEzreal Camille Orianna\n\nZayýf Olduðu Herolar\nLeBlanc Fiora Malzahar\n\nUyumlu Olduðu Herolar\nKalista Bard Vi");
+			Buton("Kullaným Baþarýlý");
+			break;
+		case "elise":
+			JOptionPane.showMessageDialog(null, "Elise \n\nGüçlü Olduðu Herolar\nVolibear Renekton Singed\n\nZayýf Olduðu Herolar\nKassadin Wukong Yorick\n\nUyumlu Olduðu Herolar\nVel'Koz Rengar Illaoi");
+			Buton("Kullaným Baþarýlý");
+			break;
+		case "evelynn":
+			JOptionPane.showMessageDialog(null, "Evelynn \n\nGüçlü Olduðu Herolar\nFiora Gragas Karthus\n\nZayýf Olduðu Herolar\nRek'Sai Maokai Mordekaiser\n\nUyumlu Olduðu Herolar\nTwisted Fate Shen Orianna");
+			Buton("Kullaným Baþarýlý");
+			break;
+		case "ezreal":
+			JOptionPane.showMessageDialog(null, "Ezreal \n\nGüçlü Olduðu Herolar\nJinx Blitzcrank Ashe\n\nZayýf Olduðu Herolar\nDraven Yasuo Graves\n\nUyumlu Olduðu Herolar\nTaric Sona Thresh");
+			Buton("Kullaným Baþarýlý");
+			break;
+		case "fiddlesticks":
+			JOptionPane.showMessageDialog(null, "Fiddlesticks \n\nGüçlü Olduðu Herolar\nKatarina Vladimir Akali\n\nZayýf Olduðu Herolar\nCho'Gath Alistar Brand\n\nUyumlu Olduðu Herolar\nAmumu Nocturne Kennen");
+			Buton("Kullaným Baþarýlý");
+			break;
+		case "fiora":
+			JOptionPane.showMessageDialog(null, "Fiora \n\nGüçlü Olduðu Herolar\nKassadin Diana Camille\n\nZayýf Olduðu Herolar\nPantheon Evelynn Tryndamere\n\nUyumlu Olduðu Herolar\nLeBlanc Jarvan IV Darius");
+			Buton("Kullaným Baþarýlý");
+			break;
+		case "fizz":
+			JOptionPane.showMessageDialog(null, "Fizz \n\nGüçlü Olduðu Herolar\nAurelion Sol Karthus Gnar\n\nZayýf Olduðu Herolar\nLissandra Diana Ryze\n\nUyumlu Olduðu Herolar\nVi Amumu Jarvan IV");
+			Buton("Kullaným Baþarýlý");
+			break;
+		case "galio":
+			JOptionPane.showMessageDialog(null, "Galio \n\nGüçlü Olduðu Herolar\nLeBlanc Cassiopeia Ashe\n\nZayýf Olduðu Herolar\nJhin Illaoi Braum\n\nUyumlu Olduðu Herolar\nIllaoi Katarina Nunu");
+			Buton("Kullaným Baþarýlý");
+			break;
+		case "gangplank":
+			JOptionPane.showMessageDialog(null, "Gangplank \n\nGüçlü Olduðu Herolar\nDr.Mundo Morgana Nasus\n\nZayýf Olduðu Herolar\nFiora Udyr Jayce\n\nUyumlu Olduðu Herolar\nAnnie Amumu Pantheon");
+			Buton("Kullaným Baþarýlý");
+			break;
+		case "garen":
+			JOptionPane.showMessageDialog(null, "Garen \n\nGüçlü Olduðu Herolar\nTryndamere Akali Rengar\n\nZayýf Olduðu Herolar\nKayle Ryze Kennen\n\nUyumlu Olduðu Herolar\nKatarina Xin Zhao Nasus");
+			Buton("Kullaným Baþarýlý");
+			break;
+		case "gnar":
+			JOptionPane.showMessageDialog(null, "Gnar \n\nGüçlü Olduðu Herolar\nSinged Kled Nautilus\n\nZayýf Olduðu Herolar\nIrelia Fizz Vladimir\n\nUyumlu Olduðu Herolar\nYasuo Azir Jarvan IV");
+			Buton("Kullaným Baþarýlý");
+			break;
+		case "gragas":
+			JOptionPane.showMessageDialog(null, "Gragas \n\nGüçlü Olduðu Herolar\nOrianna Lux Karthus\n\nZayýf Olduðu Herolar\nYasuo Mordekaiser Ahri\n\nUyumlu Olduðu Herolar\nYasuo Ashe Jayce");
+			Buton("Kullaným Baþarýlý");
+			break;
+		case "graves":
+			JOptionPane.showMessageDialog(null, "Graves \n\nGüçlü Olduðu Herolar\nEzreal Sona Ashe\n\nZayýf Olduðu Herolar\nMiss Fortune Rammus Kog'Maw\n\nUyumlu Olduðu Herolar\nThresh Leona Morgana");
+			Buton("Kullaným Baþarýlý");
+			break;
+		case "hecarim":
+			JOptionPane.showMessageDialog(null, "Hecarim \n\nGüçlü Olduðu Herolar\nKatarina Soraka Kha'Zix\n\nZayýf Olduðu Herolar\nNasus Sejuani Aatrox\n\nUyumlu Olduðu Herolar\nKled Nocturne Lulu");
+			Buton("Kullaným Baþarýlý");
+			break;
+		case "heimerdinger":
+			JOptionPane.showMessageDialog(null, "Heimerdinger \n\nGüçlü Olduðu Herolar\nJax Kassadin Lee Sin\n\nZayýf Olduðu Herolar\nSyndra Vel'Koz Xerath\n\nUyumlu Olduðu Herolar\nBlitzcrank Thresh Teemo");
+			Buton("Kullaným Baþarýlý");
+			break;
+		case "illaoi":
+			JOptionPane.showMessageDialog(null, "Illaoi \n\nGüçlü Olduðu Herolar\nCamille Galio Garen\n\nZayýf Olduðu Herolar\nQuinn Lulu Tahm Kench\n\nUyumlu Olduðu Herolar\nGalio Amumu Orianna");
+			Buton("Kullaným Baþarýlý");
+			break;
+		case "irelia":
+			JOptionPane.showMessageDialog(null, "Irelia \n\nGüçlü Olduðu Herolar\nGnar Nidalee Yasuo\n\nZayýf Olduðu Herolar\nOlaf Udyr Darius\n\nUyumlu Olduðu Herolar\nRiven Lee Sin Ahri");
+			Buton("Kullaným Baþarýlý");
+			break;
+		case "ivern":
+			JOptionPane.showMessageDialog(null, "Ivern \n\nGüçlü Olduðu Herolar\nAshe Caitlyn Miss Fortune\n\nZayýf Olduðu Herolar\nRengar Kha'Zix Aatrox\n\nUyumlu Olduðu Herolar\nRengar Blitzcrank Nidalee");
+			Buton("Kullaným Baþarýlý");
+			break;
+		case "janna":
+			JOptionPane.showMessageDialog(null, "Janna \n\nGüçlü Olduðu Herolar\nLeona Draven Tahm Kench\n\nZayýf Olduðu Herolar\nSona Diana Nidalee\n\nUyumlu Olduðu Herolar\nVayne Yasuo Draven");
+			Buton("Kullaným Baþarýlý");
+			break;
+		case "jarvan IV":
+		case "jarvan":
+			JOptionPane.showMessageDialog(null, "Jarvan IV \n\nGüçlü Olduðu Herolar\nKayle Jayce Syndra\n\nZayýf Olduðu Herolar\nYorick Lee Sin Shen\n\nUyumlu Olduðu Herolar\nGnar Orianna Yasuo");
+			Buton("Kullaným Baþarýlý");
+			break;
+		case "jax":
+			JOptionPane.showMessageDialog(null, "Jax \n\nGüçlü Olduðu Herolar\nMaster Yi Kled Vi\n\nZayýf Olduðu Herolar\nSinged Heimerdinger Ryze\n\nUyumlu Olduðu Herolar\nPantheon Ahri Teemo" );
+			Buton("Kullaným Baþarýlý");
+			break;
+		case "jayce":
+			JOptionPane.showMessageDialog(null, "Jayce n\nGüçlü Olduðu Herolar\nSinged Volibear Shen\n\nZayýf Olduðu Herolar\nYorick Ekko Xin Zhao\n\nUyumlu Olduðu Herolar\nAhri Skarner Nidalee");
+			Buton("Kullaným Baþarýlý");
+			break;
+		case "jhin":
+			JOptionPane.showMessageDialog(null, "Jhin \n\nGüçlü Olduðu Herolar\nGalio Orianna Annie\n\nZayýf Olduðu Herolar\nBraum LeBlanc Varus\n\nUyumlu Olduðu Herolar\nLeona Thresh Morgana");
+			Buton("Kullaným Baþarýlý");
+			break;
+		case "jinx":
+			JOptionPane.showMessageDialog(null, "Jinx \n\nGüçlü Olduðu Herolar\nKog'Maw Zilean Evelynn\n\nZayýf Olduðu Herolar\nYasuo Ezreal Teemo\n\nUyumlu Olduðu Herolar\nZiggs Blitzcrank Thresh");
+			Buton("Kullaným Baþarýlý");
+			break;
+		case "kalista":
+			JOptionPane.showMessageDialog(null, "Kalista \n\nGüçlü Olduðu Herolar\nRek'Sai Xerath Lux\n\nZayýf Olduðu Herolar\nLeBlanc Lucian Quinn\n\nUyumlu Olduðu Herolar\nThresh Alistar Braum");
+			Buton("Kullaným Baþarýlý");
+			break;
+		case "karma":
+			JOptionPane.showMessageDialog(null, "Karma \n\nGüçlü Olduðu Herolar\nTaric Thresh Vi\n\nZayýf Olduðu Herolar\nVeigar Kennen Swain\n\nUyumlu Olduðu Herolar\nJhin Lucian Jinx");
+			Buton("Kullaným Baþarýlý");
+			break;
+		case "karthus":
+			JOptionPane.showMessageDialog(null, "Karthus \n\nGüçlü Olduðu Herolar\nHeimerdinger Teemo Quinn\n\nZayýf Olduðu Herolar\nKassain Fizz Talon\n\nUyumlu Olduðu Herolar\nAmumu Kayle Yorick");
+			Buton("Kullaným Baþarýlý");
+			break;
+		case "kassadin":
+			JOptionPane.showMessageDialog(null, "Kassadin \n\nGüçlü Olduðu Herolar\nKarthus Aurelion Sol Veigar\n\nZayýf Olduðu Herolar\nFiora Talon Kha'Zix\n\nUyumlu Olduðu Herolar\nDiana Cho'Gath Aatrox");
+			Buton("Kullaným Baþarýlý");
+			break;
+		case "katarina":
+			JOptionPane.showMessageDialog(null, "Katarina \n\nGüçlü Olduðu Herolar\nKarthus Caitlyn Nidalee\n\nZayýf Olduðu Herolar\nCho'Gath Lulu Alistar\n\nUyumlu Olduðu Herolar\nAmumu Malphite Leona");
+			Buton("Kullaným Baþarýlý");
+			break;
+		case "kayle":
+			JOptionPane.showMessageDialog(null, "Kayle \n\nGüçlü Olduðu Herolar\nZed Garen Olaf\n\nZayýf Olduðu Herolar\nJarvan IV Xin Zhao Anivia\n\nUyumlu Olduðu Herolar\nTryndamere Master Yi");
+			Buton("Kullaným Baþarýlý");
+			break;
+		case "kennen":
+			JOptionPane.showMessageDialog(null, "Kennen \n\nGüçlü Olduðu Herolar\nSinged Garen Poppy\n\nZayýf Olduðu Herolar\nDiana Ryze Swain\n\nUyumlu Olduðu Herolar\nAmumu Malphite Fiddlesticks");
+			Buton("Kullaným Baþarýlý");
+			break;
+		case "kha'zix":
+		case "kha":
+		case "kha zix":
+			JOptionPane.showMessageDialog(null, "Kha'Zix \n\nGüçlü Olduðu Herolar\nAshe Kassadin Ivern\n\nZayýf Olduðu Herolar\nPoppy Lee Sin Hecarim\n\nUyumlu Olduðu Herolar\nZed Rengar Xin Zhao");
+			Buton("Kullaným Baþarýlý");
+			break;
+		case "kog'maw":
+		case "kog maw":
+		case "kog":
+			JOptionPane.showMessageDialog(null, "Kog'Maw \n\nGüçlü Olduðu Herolar\nGraves Varus Olaf\n\nZayýf Olduðu Herolar\nBlitzcrank Miss Fortune Bard\n\nUyumlu Olduðu Herolar\nBraum Nami Lulu");
+			Buton("Kullaným Baþarýlý");
+			break;
+		case "leblanc":
+			JOptionPane.showMessageDialog(null, "LeBlanc \n\nGüçlü Olduðu Herolar\nJhin Vel'Koz Ziggs\n\nZayýf Olduðu Herolar\nGalio Fiora Lulu\n\nUyumlu Olduðu Herolar\nFiora Leona Veigar");
+			Buton("Kullaným Baþarýlý");
+			break;
+		case "lee sin":
+			JOptionPane.showMessageDialog(null, "Lee Sin \n\nGüçlü Olduðu Herolar\nAkali Twitch Aurelion Sol\n\nZayýf Olduðu Herolar\nUdyr Trundle Vladimir\n\nUyumlu Olduðu Herolar\nYasuo Irelia Teemo");
+			Buton("Kullaným Baþarýlý");
+			break;
+		case "leona":
+			JOptionPane.showMessageDialog(null, "Leona \n\nGüçlü Olduðu Herolar\nSona Bard Caitlyn\n\nZayýf Olduðu Herolar\nJanna Morgana Lulu\n\nUyumlu Olduðu Herolar\nJhin Miss Fortune Kalista");
+			Buton("Kullaným Baþarýlý");
+			break;
+		case "lissandra":
+			JOptionPane.showMessageDialog(null, "Lissandra \n\nGüçlü Olduðu Herolar\nFizz Zed Karthus\n\nZayýf Olduðu Herolar\nKassain Anivia Brand\n\nUyumlu Olduðu Herolar\nSejuani Amumu Zyra");
+			Buton("Kullaným Baþarýlý");
+			break;
+		case "lucian":
+			JOptionPane.showMessageDialog(null, "Lucian \n\nGüçlü Olduðu Herolar\nVarus Kalista Jhin\n\nZayýf Olduðu Herolar\nFiora Braum Rengar\n\nUyumlu Olduðu Herolar\nBraum Thresh Leona");
+			Buton("Kullaným Baþarýlý");
+			break;
+		case "lulu":
+			JOptionPane.showMessageDialog(null, "Lulu \n\nGüçlü Olduðu Herolar\nKatarina LeBlanc Taric\n\nZayýf Olduðu Herolar\nBrand Annie Sona\n\nUyumlu Olduðu Herolar\nVayne Kog'Maw Caitlyn");
+			Buton("Kullaným Baþarýlý");
+			break;
+		case "lux":
+			JOptionPane.showMessageDialog(null, "Lux \n\nGüçlü Olduðu Herolar\nKarthus Annie Heimerdinger\n\nZayýf Olduðu Herolar\nKalista Vel'Koz Fizz\n\nUyumlu Olduðu Herolar\nJhin Jinx Morgana");
+			Buton("Kullaným Baþarýlý");
+			break;
+		case "malphite":
+			JOptionPane.showMessageDialog(null, "Malphite \n\nGüçlü Olduðu Herolar\nTryndamere Xin Zhao Talon\n\nZayýf Olduðu Herolar\nTrundle Mordekaiser Yorick\n\nUyumlu Olduðu Herolar\nYasuo Miss Fortune Orianna");
+			Buton("Kullaným Baþarýlý");
+			break;
+		case "malzahar":
+			JOptionPane.showMessageDialog(null, "Malzahar \n\nGüçlü Olduðu Herolar\nAhri Ekko Akali\n\nZayýf Olduðu Herolar\nMorgana Viktor Gangplank\n\nUyumlu Olduðu Herolar\nWarwick Jarvan IV Amumu");
+			Buton("Kullaným Baþarýlý");
+			break;
+		case "maokai":
+			JOptionPane.showMessageDialog(null, "Maokai \n\nGüçlü Olduðu Herolar\nRiven Katarina Evelynn\n\nZayýf Olduðu Herolar\nSwain Sion Renekton\n\nUyumlu Olduðu Herolar\nVeigar Ryze LeBlanc");
+			Buton("Kullaným Baþarýlý");
+			break;
+		case "master yi":
+			JOptionPane.showMessageDialog(null, "Master Yi \n\nGüçlü Olduðu Herolar\nAshe Ziggs Karthus\n\nZayýf Olduðu Herolar\nJax Rammus Renekton\n\nUyumlu Olduðu Herolar\nLux Amumu Ashe");
+			Buton("Kullaným Baþarýlý");
+			break;
+		case "miss fortune":
+			JOptionPane.showMessageDialog(null, "Miss Fortune \n\nGüçlü Olduðu Herolar\nKog'Maw Graves Zyra\n\nZayýf Olduðu Herolar\nBlitzcrank LeBlanc Yasuo\n\nUyumlu Olduðu Herolar\nMorgana Leona Sona");
+			Buton("Kullaným Baþarýlý");
+			break;
+		case "mordekaiser":
+			JOptionPane.showMessageDialog(null, "Mordekaiser \n\nGüçlü Olduðu Herolar\nTalon Malphite Diana\n\nZayýf Olduðu Herolar\nCassiopeia Lux Yorick\n\nUyumlu Olduðu Herolar\nBlitzcrank Yorick Thresh");
+			Buton("Kullaným Baþarýlý");
+			break;
+		case "morgana":
+			JOptionPane.showMessageDialog(null, "Morgana \n\nGüçlü Olduðu Herolar\nBlitzcrank Braum Leona\n\nZayýf Olduðu Herolar\nSivir Zyra Ganngplank\n\nUyumlu Olduðu Herolar\nMiss Fortune Jhin Caitlyn");
+			Buton("Kullaným Baþarýlý");
+			break;
+		case "nami":
+			JOptionPane.showMessageDialog(null, "Nami \n\nGüçlü Olduðu Herolar\nNasus Draven Jinx\n\nZayýf Olduðu Herolar\nNautilus Fizz Blitzcrank\n\nUyumlu Olduðu Herolar\nVayne Caitlyn Jhin");
+			Buton("Kullaným Baþarýlý");
+			break;
+		case "nasus":
+			JOptionPane.showMessageDialog(null, "Nasus \n\nGüçlü Olduðu Herolar\nZed Hecarim Shaco\n\nZayýf Olduðu Herolar\nTeemo Rumble Ryze Darius Riven\n\nUyumlu Olduðu Herolar\nRenekton Udyr Zed");
+			Buton("Kullaným Baþarýlý");
+			break;
+		case "nautilus":
+			JOptionPane.showMessageDialog(null, "Nautilus \n\nGüçlü Olduðu Herolar\nNami Katarina Blitzcrank\n\nZayýf Olduðu Herolar\nShyvana Vi Gnar\n\nUyumlu Olduðu Herolar\nJhin Jinx Lucian");
+			Buton("Kullaným Baþarýlý");
+			break;
+		case "nidalee":
+			JOptionPane.showMessageDialog(null, "Nidalee \n\nGüçlü Olduðu Herolar\nJanna Karthus Gnar\n\nZayýf Olduðu Herolar\nAnnie Irelia Akali\n\nUyumlu Olduðu Herolar\nCaitlyn Varus Lux");
+			Buton("Kullaným Baþarýlý");
+			break;
+		case "nocturne":
+			JOptionPane.showMessageDialog(null, "Nocturne \n\nGüçlü Olduðu Herolar\nZed Rek'Sai Kassadin\n\nZayýf Olduðu Herolar\nUdyr Olaf Shyvana\n\nUyumlu Olduðu Herolar\nTwisted Fate Cho'Gath Hecarim");
+			Buton("Kullaným Baþarýlý");
+			break;
+		case "nunu":
+			JOptionPane.showMessageDialog(null, "Nunu \n\nGüçlü Olduðu Herolar\nRenekton Heimerdinger Yorick\n\nZayýf Olduðu Herolar\nCassiopeia Sona Sivir\n\nUyumlu Olduðu Herolar\nRyze Amumu Corki");
+			Buton("Kullaným Baþarýlý");
+			break;
+		case "olaf":
+			JOptionPane.showMessageDialog(null, "Olaf \n\nGüçlü Olduðu Herolar\n Irelia Poppy Riven \n\nZayýf Olduðu Herolar\n Kayle Quinn Jarvan IV \n\nUyumlu Olduðu Herolar\n Darius Blitzcranck Aatrox");
+			Buton("Kullaným Baþarýlý");
+			break;
+		case "orianna":
+			JOptionPane.showMessageDialog(null, "Orianna \n\nGüçlü Olduðu Herolar\nRyze Twisted Fate Heimerdinger  \n\nZayýf Olduðu Herolar\nEkko Ahri Xearth \n\nUyumlu Olduðu Herolar\nYasuo Malphite Illaoi");
+			Buton("Kullaným Baþarýlý");
+			break;
+		case "pantheon":
+			JOptionPane.showMessageDialog(null, "Pantheon \n\nGüçlü Olduðu Herolar\nFiora Wukong Trydamere Kled  \n\nZayýf Olduðu Herolar\n Rumble Ryze Elise \n\nUyumlu Olduðu Herolar\nJax Blitzcranck Xin Zhao");
+			Buton("Kullaným Baþarýlý");
+			break;
+		case "poppy":
+			JOptionPane.showMessageDialog(null, "Poppy \n\nGüçlü Olduðu Herolar\nZac Kha'Zix Riven  \n\nZayýf Olduðu Herolar\nTrundle Olaf Kennen \n\nUyumlu Olduðu Herolar\nVayne Taliyah Alistar");
+			Buton("Kullaným Baþarýlý");
+			break;
+		case "quinn":
+			JOptionPane.showMessageDialog(null, "Quinn \n\nGüçlü Olduðu Herolar\n Illaoi Riven Kalista \n\nZayýf Olduðu Herolar\n Caitlyn Pantheon Varus \n\nUyumlu Olduðu Herolar\nLeona Thresh Nami");
+			Buton("Kullaným Baþarýlý");
+			break;
+		case "rammus":
+			JOptionPane.showMessageDialog(null, "Rammus \n\nGüçlü Olduðu Herolar\nMaster Yi Trydamere Yasuo \n\nZayýf Olduðu Herolar\n Olaf Trundle Shyvana \n\nUyumlu Olduðu Herolar\nKled Shen Ahri ");
+			Buton("Kullaným Baþarýlý");
+			break;
+		case "rek'sai":
+		case "rek sai":
+		case "reksai":
+			JOptionPane.showMessageDialog(null, "Rek'Sai \n\nGüçlü Olduðu Herolar\nShaco Katarina Twitch \n\nZayýf Olduðu Herolar\n Olaf Kalista Nocturne \n\nUyumlu Olduðu Herolar\n Yasuo Shen Cho'Gath");
+			Buton("Kullaným Baþarýlý");
+			break;
+		case "renekton":
+			JOptionPane.showMessageDialog(null, "Renekton  \n\nGüçlü Olduðu Herolar\n Wukong Darius Master Yi \n\nZayýf Olduðu Herolar\nAlistar Trundle Quinn \n\nUyumlu Olduðu Herolar\nNasus Fiora Lulu");
+			Buton("Kullaným Baþarýlý");
+			break;
+		case "rengar":
+			JOptionPane.showMessageDialog(null, "Rengar  \n\nGüçlü Olduðu Herolar\n Ivern Soraka Talon\n\nZayýf Olduðu Herolar\nShyvana Garen Poppy \n\nUyumlu Olduðu Herolar\nIvern Kha'Zix Shen");
+			Buton("Kullaným Baþarýlý");
+			break;
+		case "riven":
+			JOptionPane.showMessageDialog(null, "Riven  \n\nGüçlü Olduðu Herolar\nLee Sin Katarina Vel'koz Diana  \n\nZayýf Olduðu Herolar\n Volibear Olaf Poppy\n\nUyumlu Olduðu Herolar\nYasuo Orianna Ahri");
+			Buton("Kullaným Baþarýlý");
+			break;
+		case "rumble":
+			JOptionPane.showMessageDialog(null, "Rumble  \n\nGüçlü Olduðu Herolar\nPantehon Nasus Malphite \n\nZayýf Olduðu Herolar\n Viktor Xin Zhao Volibear \n\nUyumlu Olduðu Herolar\nSejuani Amumu Jarvan IV");
+			Buton("Kullaným Baþarýlý");
+			break;
+		case "ryze":
+			JOptionPane.showMessageDialog(null, "Ryze \n\nGüçlü Olduðu Herolar\nGaren Nasus Fizz  \n\nZayýf Olduðu Herolar\n Cassiopeia Orianna Brand \n\nUyumlu Olduðu Herolar\nNunu Lee Sin Maokai ");
+			Buton("Kullaným Baþarýlý");
+			break;
+		case "sejuani":
+			JOptionPane.showMessageDialog(null, "Sejuani \n\nGüçlü Olduðu Herolar\nHecarim Darius Katarina \n\nZayýf Olduðu Herolar\n Xin Zhao Olaf Nidale \n\nUyumlu Olduðu Herolar\nYasuo Lissandra Talon");
+			Buton("Kullaným Baþarýlý");
+			break;
+		case "shaco":
+			JOptionPane.showMessageDialog(null, "Shaco \n\nGüçlü Olduðu Herolar\nJhin Soraka Xerath  \n\nZayýf Olduðu Herolar\n Rek'Sai volibear Udyr\n\nUyumlu Olduðu Herolar\nBlitzcrank Orianna Teemo ");
+			Buton("Kullaným Baþarýlý");
+			break;
+		case "shen":
+			JOptionPane.showMessageDialog(null, "Shen \n\nGüçlü Olduðu Herolar\nKled Jarvan IV Fiora  \n\nZayýf Olduðu Herolar\nJayce Swain Warwick \n\nUyumlu Olduðu Herolar\n Rek'Sai Twisted Fate Zed");
+			Buton("Kullaným Baþarýlý");
+			break;
+		case "shyvana":
+			JOptionPane.showMessageDialog(null, "Shyvana \n\nGüçlü Olduðu Herolar\nAmumu Rengar Nautilus \n\nZayýf Olduðu Herolar\n Aatrox Vi Teemo  \n\nUyumlu Olduðu Herolar\nYasuo Riven Orianna ");
+			Buton("Kullaným Baþarýlý");
+			break;
+		case "singed":
+			JOptionPane.showMessageDialog(null, "Singed \n\nGüçlü Olduðu Herolar\nJax Volibear Karthus \n\nZayýf Olduðu Herolar\nKennen Gnar Jayce \n\nUyumlu Olduðu Herolar\nYasuo Cassiopeia Volibear");
+			Buton("Kullaným Baþarýlý");
+			break;
+		case "sion":
+			JOptionPane.showMessageDialog(null, "Sion \n\nGüçlü Olduðu Herolar\nLeBlanc Maokai Katarina \n\nZayýf Olduðu Herolar\nVladimir Pantheon Morgana \n\nUyumlu Olduðu Herolar\nYasuo Jhin Gnar");
+			Buton("Kullaným Baþarýlý");
+			break;
+		case "sivir":
+			JOptionPane.showMessageDialog(null, "Sivir \n\nGüçlü Olduðu Herolar\nBlitzcrank Caitlyn Morgana \n\nZayýf Olduðu Herolar\nDraven Akali Twitch \n\nUyumlu Olduðu Herolar\nBraum Leona Thresh");
+			Buton("Kullaným Baþarýlý");
+			break;
+		case "skarner":
+			JOptionPane.showMessageDialog(null, "Skarner \n\nGüçlü Olduðu Herolar\nRiven Warwick Katarina  \n\nZayýf Olduðu Herolar\n Olaf Morgana Ashe \n\nUyumlu Olduðu Herolar\nJayce Heimerdinger");
+			Buton("Kullaným Baþarýlý");
+			break;
+		case "sona":
+			JOptionPane.showMessageDialog(null, "Sona \n\nGüçlü Olduðu Herolar\nJanna Vayne Lulu \n\nZayýf Olduðu Herolar\nBlitzcrank Leona Graves\n\nUyumlu Olduðu Herolar\nMiss Fortune Caitlyn Ezreal");
+			Buton("Kullaným Baþarýlý");
+			break;
+		case "soraka":
+			JOptionPane.showMessageDialog(null, "Soraka \n\nGüçlü Olduðu Herolar\nBraum Karthus Alistar   \n\nZayýf Olduðu Herolar\nRengar Tristana Hecarim\n\nUyumlu Olduðu Herolar\nVayne Jhin Caitlyn");
+			Buton("Kullaným Baþarýlý");
+			break;
+		case "swain":
+			JOptionPane.showMessageDialog(null, "Swain \n\nGüçlü Olduðu Herolar\n Twisted Fate Vladimir Teemo \n\nZayýf Olduðu Herolar\n Sydra Xerath Anivia\n\nUyumlu Olduðu Herolar\n Vladimir Amumu Maokai");
+			Buton("Kullaným Baþarýlý");
+			break;
+		case "syndra":
+			JOptionPane.showMessageDialog(null, "Syndra \n\nGüçlü Olduðu Herolar\n Heimerdinger Taliyah Swain \n\nZayýf Olduðu Herolar\nTalon Aatrox Jarvan IV \n\nUyumlu Olduðu Herolar\nZyra Zliean Zac ");
+			Buton("Kullaným Baþarýlý");
+			break;
+		case "tahm kench":
+		case "tahm":
+			JOptionPane.showMessageDialog(null, "Tahm Kench \n\nGüçlü Olduðu Herolar\nThresh Kled Zed  \n\nZayýf Olduðu Herolar\nVayne Nami Janna\n\nUyumlu Olduðu Herolar\nJinx Kalista Jhin ");
+			Buton("Kullaným Baþarýlý");
+			break;
+		case "taliyah":
+			JOptionPane.showMessageDialog(null, "Taliyah \n\nGüçlü Olduðu Herolar\n Miss Fortune Jhin Kalista \n\nZayýf Olduðu Herolar\n Sydra Zed Diana \n\nUyumlu Olduðu Herolar\nThresh Blitzcranck Poppy");
+			Buton("Kullaným Baþarýlý");
+			break;
+		case "talon":
+			JOptionPane.showMessageDialog(null, "Talon \n\nGüçlü Olduðu Herolar\nKarthus Jhin Kassadin  \n\nZayýf Olduðu Herolar\nRengar Mordekaiser Diana \n\nUyumlu Olduðu Herolar\nZed Katarina Sejuani");
+			Buton("Kullaným Baþarýlý");
+			break;
+		case "taric":
+			JOptionPane.showMessageDialog(null, "Taric \n\nGüçlü Olduðu Herolar\nZed Blitzcranck Ezreal  \n\nZayýf Olduðu Herolar\n Karma Bard Lulu \n\nUyumlu Olduðu Herolar\nEzreal Jhin Ashe ");
+			Buton("Kullaným Baþarýlý");
+			break;
+		case "teemo":
+			JOptionPane.showMessageDialog(null, "Teemo \n\nGüçlü Olduðu Herolar\nTrydamere Jinx Kled \n\nZayýf Olduðu Herolar\n Brand Vel'Koz Swain \n\nUyumlu Olduðu Herolar\nCassiopeia Volibear Blitzcranck");
+			Buton("Kullaným Baþarýlý");
+			break;
+		case "thresh":
+			JOptionPane.showMessageDialog(null, "Thresh \n\nGüçlü Olduðu Herolar\nDraven Katarina Bard  \n\nZayýf Olduðu Herolar\nTahm Kench Karma Lulu \n\nUyumlu Olduðu Herolar\nKalista Vayne Lucian");
+			Buton("Kullaným Baþarýlý");
+			break;
+		case "tristana":
+			JOptionPane.showMessageDialog(null, "Tristana \n\nGüçlü Olduðu Herolar\nSoraka Illaoi Swain  \n\nZayýf Olduðu Herolar\nDiana Morgana Ahri \n\nUyumlu Olduðu Herolar\nBraum Thresh Leona");
+			Buton("Kullaným Baþarýlý");
+			break;
+		case "trundle":
+			JOptionPane.showMessageDialog(null, "Trundle\n\nGüçlü Olduðu Herolar\nMalphite Lee Sin Poppy \n\nZayýf Olduðu Herolar\nJayce Pantheon Kayle \n\nUyumlu Olduðu Herolar\nVayne Anivia Aatrox");
+			Buton("Kullaným Baþarýlý");
+			break;
+		case "tryndamere":
+			JOptionPane.showMessageDialog(null, "Trydamere\n\nGüçlü Olduðu Herolar\nZed Nidale Fiora  \n\nZayýf Olduðu Herolar\n Rammus Pantheon Garen\n\nUyumlu Olduðu Herolar\nBlitzcrank Ashe Aatrox");
+			Buton("Kullaným Baþarýlý");
+			break;
+		case "twisted fate":
+		case "tf":
+			JOptionPane.showMessageDialog(null, "Twisted Fate \n\nGüçlü Olduðu Herolar\nKarthus Twitch Aureloin Sol  \n\nZayýf Olduðu Herolar\n Swain Fizz Diana \n\nUyumlu Olduðu Herolar\nShen Blitzcranck Nocturne");
+			Buton("Kullaným Baþarýlý");
+			break;
+		case "twitch":
+			JOptionPane.showMessageDialog(null, "Twitch \n\nGüçlü Olduðu Herolar\nVayne Ezreal Sivir  \n\nZayýf Olduðu Herolar\nCaitlyn Corki Lee Sin\n\nUyumlu Olduðu Herolar\nThresh Leona Morgana");
+			Buton("Kullaným Baþarýlý");
+			break;
+		case "udyr":
+			JOptionPane.showMessageDialog(null, "Udyr \n\nGüçlü Olduðu Herolar\nLee Sin Irelia Gangplank \n\nZayýf Olduðu Herolar\nAshe Trundle Jayce \n\nUyumlu Olduðu Herolar\nNasus LeBlanc Ryze");
+			Buton("Kullaným Baþarýlý");
+			break;
+		case "urgot":
+			JOptionPane.showMessageDialog(null, "Urgot \n\nGüçlü Olduðu Herolar\nZed Nasus Graves \n\nZayýf Olduðu Herolar\nTwitch Nami Bard\n\nUyumlu Olduðu Herolar\nBard Soraka Taric");
+			Buton("Kullaným Baþarýlý");
+			break;
+		case "varus":
+			JOptionPane.showMessageDialog(null, "Varus \n\nGüçlü Olduðu Herolar\nDraven Jhin Soraka \n\nZayýf Olduðu Herolar\nLucian Yasuo Leona \n\nUyumlu Olduðu Herolar\nThresh Leona Nami");
+			Buton("Kullaným Baþarýlý");
+			break;
+		case "vayne":
+			JOptionPane.showMessageDialog(null, "Vayne \n\nGüçlü Olduðu Herolar\nTahm Kench Darius Alistar \n\nZayýf Olduðu Herolar\nTwitch Corki Ashe \n\nUyumlu Olduðu Herolar\nThresh Braum Nami");
+			Buton("Kullaným Baþarýlý");
+			break;
+		case "veigar":
+			JOptionPane.showMessageDialog(null, "Veigar \n\nGüçlü Olduðu Herolar\nKarma Twisted Fate Karthus \n\nZayýf Olduðu Herolar\n Kassadin Zed Fizz\n\nUyumlu Olduðu Herolar\nLux Maokai LeBlanc");
+			Buton("Kullaným Baþarýlý");
+			break;
+		case "vel'koz":
+		case "vel koz":
+		case "velkoz":
+			JOptionPane.showMessageDialog(null, "Vel'Koz \n\nGüçlü Olduðu Herolar\nHeimderdinger Teemo Annie Lux \n\nZayýf Olduðu Herolar\nLeBlanc Zed Fizz \n\nUyumlu Olduðu Herolar\nElise Amumu Jhin");
+			Buton("Kullaným Baþarýlý");
+			break;
+		case "vi":
+			JOptionPane.showMessageDialog(null, "Vi \n\nGüçlü Olduðu Herolar\nAzir Kassadin Katarina \n\nZayýf Olduðu Herolar\nJax Pantheon Darius\n\nUyumlu Olduðu Herolar\nYasuo Caitlyn Fizz");
+			Buton("Kullaným Baþarýlý");
+			break;
+		case "viktor":
+			JOptionPane.showMessageDialog(null, "Viktor \n\nGüçlü Olduðu Herolar\nCassiopeia Rumble Karthus \n\nZayýf Olduðu Herolar\nZiggs Sydra Zac\n\nUyumlu Olduðu Herolar\nJarvan IV Amumu Malzahar");
+			Buton("Kullaným Baþarýlý");
+			break;
+		case "vladimir":
+			JOptionPane.showMessageDialog(null, "Vladimir \n\nGüçlü Olduðu Herolar\nZed Lee Sin Sion \n\nZayýf Olduðu Herolar\nSwain Irelia Fiddlesticks\n\nUyumlu Olduðu Herolar\nSwain Kenne Zed");
+			Buton("Kullaným Baþarýlý");
+			break;
+		case "volibear":
+			JOptionPane.showMessageDialog(null, "Volibear \n\nGüçlü Olduðu Herolar\nRiven Shaco Amumu \n\nZayýf Olduðu Herolar\nSinged Jayce Elise \n\nUyumlu Olduðu Herolar\nYasuo Teemo Vayne");
+			Buton("Kullaným Baþarýlý");
+			break;
+		case "warwick":
+			JOptionPane.showMessageDialog(null, "Warwick \n\nGüçlü Olduðu Herolar\nShen Yasuo Katarina \n\nZayýf Olduðu Herolar\nOlaf Yorick Rengar \n\nUyumlu Olduðu Herolar\n Malzahar Lee Sin Veigar");
+			Buton("Kullaným Baþarýlý");
+			break;
+		case "wukong":
+			JOptionPane.showMessageDialog(null, "Wukong \n\nGüçlü Olduðu Herolar\nJhin Master Yi Zed \n\nZayýf Olduðu Herolar\nRenekton Olaf Pantheon \n\nUyumlu Olduðu Herolar\nYasuo Orianna Katarina");
+			Buton("Kullaným Baþarýlý");
+			break;
+		case "xerath":
+			JOptionPane.showMessageDialog(null, "Xearth \n\nGüçlü Olduðu Herolar\nHeimderdinger Ryze Orianna \n\nZayýf Olduðu Herolar\nKalista Kassadin \n\nUyumlu Olduðu Herolar\nJarvan IV Leona Amumu ");
+			Buton("Kullaným Baþarýlý");
+			break;
+		case "xin zhao":
+		case "xin":
+			JOptionPane.showMessageDialog(null, "Xin Zhao \n\nGüçlü Olduðu Herolar\nAurelion Amumu Yorick \n\nZayýf Olduðu Herolar\nJax Malphite Rammus \n\nUyumlu Olduðu Herolar\nYasuo Kha'Zix Pantheon ");
+			Buton("Kullaným Baþarýlý");
+			break;
+		case "yasuo":
+			JOptionPane.showMessageDialog(null, "Yasuo \n\nGüçlü Olduðu Herolar\nCaitlyn Ezreal Miss Fortune \n\nZayýf Olduðu Herolar\nRammus Irelia Trundle\n\nUyumlu Olduðu Herolar\nMalphite Alistar Wukong");
+			Buton("Kullaným Baþarýlý");
+			break;
+		case "yorick":
+			JOptionPane.showMessageDialog(null, "Yorick \n\nGüçlü Olduðu Herolar\nJayce Jarvan IV Malphite \n\nZayýf Olduðu Herolar\nCho'Gath Xin Zhao Trundle \n\nUyumlu Olduðu Herolar\nMordekaiser Vayne Cassiopeia ");
+			Buton("Kullaným Baþarýlý");
+			break;
+		case "zac":
+			JOptionPane.showMessageDialog(null, "Zac \n\nGüçlü Olduðu Herolar\nKatarina Malphite Jax \n\nZayýf Olduðu Herolar\nPopy Zilean Vi \n\nUyumlu Olduðu Herolar\nDiana Yasuo Orianna");
+			Buton("Kullaným Baþarýlý");
+			break;
+		case "zed":
+			JOptionPane.showMessageDialog(null, "Zed \n\nGüçlü Olduðu Herolar\nAshe Taliyah Vel'koz \n\nZayýf Olduðu Herolar\nLissandra Kayle Vladimir \n\nUyumlu Olduðu Herolar\n Kha'Zix");
+			Buton("Kullaným Baþarýlý");
+			break;
+		case "ziggs":
+			JOptionPane.showMessageDialog(null, "Ziggs \n\nGüçlü Olduðu Herolar\nAzir VÝktor Annie \n\nZayýf Olduðu Herolar\nMaster Yi LeBlanc Kassadin\n\nUyumlu Olduðu Herolar\nJinx Jarvan IV Amumu");
+			Buton("Kullaným Baþarýlý");
+			break;
+		case "zilean":
+			JOptionPane.showMessageDialog(null, "Zilean \n\nGüçlü Olduðu Herolar\nZed Braum Zac \n\nZayýf Olduðu Herolar\nKasssadin Jinx Annie\n\nUyumlu Olduðu Herolar\nCaitlyn Jhin Vayne");
+			Buton("Kullaným Baþarýlý");
+			break;
+		case "zyra":
+			JOptionPane.showConfirmDialog(null, "Zyra \n\nGüçlü Olduðu Herolar\nBraum Thresh Alistar \n\nZayýf Olduðu Herolar\nAkali Fizz Talon \n\nUyumlu Olduðu Herolar\nSydra Jhin Jinx");
+			Buton("Kullaným Baþarýlý");
+			break;
+		default:
+			Buton("Karakterin Adýný Yanlýþ Girdiniz..!");
+		}
+	}
+	public static void main(String args[]){
+		String HeroAdi;
+		HeroAdi = JOptionPane.showInputDialog("Hero Adý: ");
+		Counter(HeroAdi);
+		System.gc(); // garbage collector
+	}
+}
